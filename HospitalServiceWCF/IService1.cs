@@ -18,7 +18,19 @@ namespace HospitalServiceWCF
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         [OperationContract]
-        int insertPatient(Patient p);
+        int InsertPatient(Patient p);
+
+        [OperationContract]
+        int UpdatePatient(Patient p);
+
+        [OperationContract]
+        int DeletePatient(Patient p);
+
+        [OperationContract]
+        Patient GetPatient(Patient p);
+
+        [OperationContract]
+        List<Patient> GetAllPatients();
         // TODO: Add your service operations here
     }
 

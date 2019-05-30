@@ -19,11 +19,35 @@
   <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_insertPatient_InputMessage">
-    <wsdl:part name="parameters" element="tns:insertPatient" />
+  <wsdl:message name="IService1_InsertPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPatient" />
   </wsdl:message>
-  <wsdl:message name="IService1_insertPatient_OutputMessage">
-    <wsdl:part name="parameters" element="tns:insertPatientResponse" />
+  <wsdl:message name="IService1_InsertPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePatient" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePatient" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatient" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllPatients_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPatients" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllPatients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPatientsResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
@@ -34,9 +58,25 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="insertPatient">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertPatient" message="tns:IService1_insertPatient_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insertPatientResponse" message="tns:IService1_insertPatient_OutputMessage" />
+    <wsdl:operation name="InsertPatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertPatient" message="tns:IService1_InsertPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertPatientResponse" message="tns:IService1_InsertPatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdatePatient" message="tns:IService1_UpdatePatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatePatientResponse" message="tns:IService1_UpdatePatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeletePatient" message="tns:IService1_DeletePatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletePatientResponse" message="tns:IService1_DeletePatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPatient" message="tns:IService1_GetPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPatientResponse" message="tns:IService1_GetPatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPatients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllPatients" message="tns:IService1_GetAllPatients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllPatientsResponse" message="tns:IService1_GetAllPatients_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -59,8 +99,44 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="insertPatient">
-      <soap:operation soapAction="http://tempuri.org/IService1/insertPatient" style="document" />
+    <wsdl:operation name="InsertPatient">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePatient">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdatePatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePatient">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeletePatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatient">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPatients">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllPatients" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

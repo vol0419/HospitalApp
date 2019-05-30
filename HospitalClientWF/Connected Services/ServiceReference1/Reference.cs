@@ -199,11 +199,35 @@ namespace HospitalClientWF.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<HospitalClientWF.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(HospitalClientWF.ServiceReference1.CompositeType composite);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertPatient", ReplyAction="http://tempuri.org/IService1/insertPatientResponse")]
-        int insertPatient(HospitalClientWF.ServiceReference1.Patient p);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertPatient", ReplyAction="http://tempuri.org/IService1/InsertPatientResponse")]
+        int InsertPatient(HospitalClientWF.ServiceReference1.Patient p);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertPatient", ReplyAction="http://tempuri.org/IService1/insertPatientResponse")]
-        System.Threading.Tasks.Task<int> insertPatientAsync(HospitalClientWF.ServiceReference1.Patient p);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertPatient", ReplyAction="http://tempuri.org/IService1/InsertPatientResponse")]
+        System.Threading.Tasks.Task<int> InsertPatientAsync(HospitalClientWF.ServiceReference1.Patient p);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdatePatient", ReplyAction="http://tempuri.org/IService1/UpdatePatientResponse")]
+        int UpdatePatient(HospitalClientWF.ServiceReference1.Patient p);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdatePatient", ReplyAction="http://tempuri.org/IService1/UpdatePatientResponse")]
+        System.Threading.Tasks.Task<int> UpdatePatientAsync(HospitalClientWF.ServiceReference1.Patient p);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeletePatient", ReplyAction="http://tempuri.org/IService1/DeletePatientResponse")]
+        int DeletePatient(HospitalClientWF.ServiceReference1.Patient p);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeletePatient", ReplyAction="http://tempuri.org/IService1/DeletePatientResponse")]
+        System.Threading.Tasks.Task<int> DeletePatientAsync(HospitalClientWF.ServiceReference1.Patient p);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPatient", ReplyAction="http://tempuri.org/IService1/GetPatientResponse")]
+        HospitalClientWF.ServiceReference1.Patient GetPatient(HospitalClientWF.ServiceReference1.Patient p);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPatient", ReplyAction="http://tempuri.org/IService1/GetPatientResponse")]
+        System.Threading.Tasks.Task<HospitalClientWF.ServiceReference1.Patient> GetPatientAsync(HospitalClientWF.ServiceReference1.Patient p);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllPatients", ReplyAction="http://tempuri.org/IService1/GetAllPatientsResponse")]
+        HospitalClientWF.ServiceReference1.Patient[] GetAllPatients();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllPatients", ReplyAction="http://tempuri.org/IService1/GetAllPatientsResponse")]
+        System.Threading.Tasks.Task<HospitalClientWF.ServiceReference1.Patient[]> GetAllPatientsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -249,12 +273,44 @@ namespace HospitalClientWF.ServiceReference1 {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
         
-        public int insertPatient(HospitalClientWF.ServiceReference1.Patient p) {
-            return base.Channel.insertPatient(p);
+        public int InsertPatient(HospitalClientWF.ServiceReference1.Patient p) {
+            return base.Channel.InsertPatient(p);
         }
         
-        public System.Threading.Tasks.Task<int> insertPatientAsync(HospitalClientWF.ServiceReference1.Patient p) {
-            return base.Channel.insertPatientAsync(p);
+        public System.Threading.Tasks.Task<int> InsertPatientAsync(HospitalClientWF.ServiceReference1.Patient p) {
+            return base.Channel.InsertPatientAsync(p);
+        }
+        
+        public int UpdatePatient(HospitalClientWF.ServiceReference1.Patient p) {
+            return base.Channel.UpdatePatient(p);
+        }
+        
+        public System.Threading.Tasks.Task<int> UpdatePatientAsync(HospitalClientWF.ServiceReference1.Patient p) {
+            return base.Channel.UpdatePatientAsync(p);
+        }
+        
+        public int DeletePatient(HospitalClientWF.ServiceReference1.Patient p) {
+            return base.Channel.DeletePatient(p);
+        }
+        
+        public System.Threading.Tasks.Task<int> DeletePatientAsync(HospitalClientWF.ServiceReference1.Patient p) {
+            return base.Channel.DeletePatientAsync(p);
+        }
+        
+        public HospitalClientWF.ServiceReference1.Patient GetPatient(HospitalClientWF.ServiceReference1.Patient p) {
+            return base.Channel.GetPatient(p);
+        }
+        
+        public System.Threading.Tasks.Task<HospitalClientWF.ServiceReference1.Patient> GetPatientAsync(HospitalClientWF.ServiceReference1.Patient p) {
+            return base.Channel.GetPatientAsync(p);
+        }
+        
+        public HospitalClientWF.ServiceReference1.Patient[] GetAllPatients() {
+            return base.Channel.GetAllPatients();
+        }
+        
+        public System.Threading.Tasks.Task<HospitalClientWF.ServiceReference1.Patient[]> GetAllPatientsAsync() {
+            return base.Channel.GetAllPatientsAsync();
         }
     }
 }
